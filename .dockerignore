@@ -1,0 +1,5 @@
+data/**
+js/**
+Dockerfile**
+*.md
+restart.sh
