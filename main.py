@@ -27,6 +27,7 @@ DB_USER = os.getenv("DB_USER")
 DB_PASSWORD = os.getenv("DB_PASSWORD")
 DB_NAME = os.getenv("DB_NAME")
 FUCLAUDE_BASE_URL = os.getenv("FUCLAUDE_BASE_URL", "https://demo.fuclaude.com")
+SHARE_TOKEN_SITE_LIMIT = os.getenv("SHARE_TOKEN_SITE_LIMIT", "")
 SITE_PASSWORD = os.getenv("SITE_PASSWORD")
 if not SITE_PASSWORD:
     SITE_PASSWORD = "".join(random.choices(string.ascii_letters + string.digits, k=16))
@@ -95,7 +96,7 @@ def register_share_token(
         "unique_name": unique_name,
         "access_token": access_token,
         "expires_in": expires_in,
-        "site_limit": "",
+        "site_limit": SHARE_TOKEN_SITE_LIMIT,
         "gpt35_limit": -1,
         "gpt4_limit": -1,
         "show_conversations": show_conversations,
