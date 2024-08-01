@@ -4,15 +4,16 @@ This README provides instructions on how to run the ChatGPT Share Backend using 
 
 ### Environment Variables
 
-| Variable            | Default Value               | Required | Description                                       |
-|---------------------|-----------------------------|----------|---------------------------------------------------|
-| `FUCLAUDE_BASE_URL` |`https://demo.fuclaude.com`  | Y        | Base URL for the FUCLAUDE API.                    |
-| `DB_HOST`           |                             | N        | Hostname or IP address of the MySQL server.       |
-| `DB_PORT`           |                             | N        | Port number of the MySQL server.                  |
-| `DB_USER`           |                             | N        | Username for the MySQL database.                  |
-| `DB_PASSWORD`       |                             | N        | Password for the MySQL database.                  |
-| `DB_NAME`           |                             | N        | Name of the MySQL database.                       |
-| `SITE_PASSWORD`     |                             | Y        | Password for accessing the site.                  |
+| Variable                 | Default Value               | Required | Description                                                          |
+|--------------------------|-----------------------------|----------|----------------------------------------------------------------------|
+| `FUCLAUDE_BASE_URL`      | `https://demo.fuclaude.com` | Y        | Base URL for the FUCLAUDE API.                                       |
+| `SHARE_TOKEN_SITE_LIMIT` |                             | N        | Site limit for generating token share. eg: `https://new.oaifree.com` |
+| `DB_HOST`                |                             | N        | Hostname or IP address of the MySQL server.                          |
+| `DB_PORT`                |                             | N        | Port number of the MySQL server.                                     |
+| `DB_USER`                |                             | N        | Username for the MySQL database.                                     |
+| `DB_PASSWORD`            |                             | N        | Password for the MySQL database.                                     |
+| `DB_NAME`                |                             | N        | Name of the MySQL database.                                          |
+| `SITE_PASSWORD`          |                             | Y        | Password for accessing the site.                                     |
 
 ### Volume Mapping
 

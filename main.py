@@ -311,6 +311,13 @@ def get_fuclaude_token_by_key(user_key):
             if not new_share_token:
                 return False, "register share token failed"
 
+            # 记录token_relation表
+            execute_query(
+                cursor,
+                "INSERT INTO token_relation (user_key, share_token, token_id, deleted) VALUES (%s, %s, %s, 1)",
+                (user_key, '', assign_token["id"]),
+            )
+
             conn.commit()
             return True, new_share_token
 
